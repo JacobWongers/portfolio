@@ -12,6 +12,27 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => sectionObserver.observe(section));
 
+const expTabs = [...document.querySelectorAll('.exp-tab')];
+
+const selectTab = (tab) => {
+  expTabs.forEach((t) => {
+    const selected = t === tab;
+    t.setAttribute('aria-selected', String(selected));
+    t.tabIndex = selected ? 0 : -1;
+    document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
+  });
+};
+
+expTabs.forEach((tab, i) => {
+  tab.addEventListener('click', () => selectTab(tab));
+  tab.addEventListener('keydown', (event) => {
+    if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+    const next = expTabs[(i + (event.key === 'ArrowRight' ? 1 : -1) + expTabs.length) % expTabs.length];
+    selectTab(next);
+    next.focus();
+  });
+});
+
 contactForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const formData = new FormData(contactForm);
