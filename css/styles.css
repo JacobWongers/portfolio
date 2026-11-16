@@ -23,7 +23,7 @@ a { color: inherit; }
 .nav-link { padding: 7px 15px; border-radius: 17px; color: var(--muted); font-size: 17px; text-decoration: none; transition: background .15s ease, color .15s ease; }
 .nav-link:hover, .nav-link.is-active { color: var(--bright); background: #343436; }
 main, .site-footer { width: min(calc(100% - 40px), var(--max-width)); margin: 0 auto; }
-.section { min-height: calc(100vh - 80px); padding: 112px 0 112px; scroll-margin-top: 90px; display: flex; align-items: center; }
+.section { padding: 64px 0; scroll-margin-top: 70px; display: flex; align-items: center; }
 .section-inner { width: 100%; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2 { color: var(--bright); letter-spacing: -.04em; }
@@ -88,7 +88,7 @@ p { color: var(--muted); font-size: 19px; }
 .project-copy p { min-height: 44px; margin-bottom: 14px; font-size: 17px; }
 .project-copy span { display: block; margin-bottom: 18px; color: var(--muted); font-size: 16px; }
 .project-card a { color: var(--bright); font-size: 17px; }
-.contact-section { padding-bottom: 112px; }
+.contact-section { padding-bottom: 72px; }
 .contact-section > .section-inner > p { max-width: 540px; }
 .contact-form { display: grid; max-width: 560px; gap: 9px; margin-top: 30px; }
 .contact-form label { color: var(--muted); font-size: 17px; }
@@ -106,7 +106,8 @@ p { color: var(--muted); font-size: 19px; }
   .site-header { top: 8px; margin-top: 8px; }
   .nav-link { padding: 7px 10px; font-size: 12px; }
   main, .site-footer { width: min(calc(100% - 32px), var(--max-width)); }
-  .section { min-height: calc(100vh - 64px); padding: 82px 0; }
+  .section { padding: 48px 0; }
+  .hero-section { min-height: calc(100vh - 64px); }
   .about-content { grid-template-columns: 1fr; gap: 28px; }
   .photo-wrap { min-height: 250px; justify-content: start; }
   .photo-wrap img { width: 288px; max-height: 336px; }
